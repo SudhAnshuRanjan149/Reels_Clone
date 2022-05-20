@@ -2,24 +2,30 @@ import * as React from "react";
 import Card from "@mui/material/Card";
 import { Button } from "@mui/material";
 import "./SignUp.scss";
-import insta from "./../../public/Assets/insta_name_logo.png";
+import lock from "./../../public/Assets/lock-2.png";
 
 import Divider from "@mui/material/Divider";
 import TextField from "@mui/material/TextField";
-import FacebookIcon from "@mui/icons-material/Facebook";
 import { useHistory } from "react-router-dom";
 
 import Footer from "./Footer.js";
+import Header from "./Header.js";
 
-export default function Login() {
+export default function ResetPassword() {
   let history = useHistory();
 
   return (
     <div className="signup_wrapper">
+      <Header />
       <div className="signup_card">
         <Card className="card_body">
           <div className="logo">
-            <img src={insta} alt="" />
+            <img src={lock} alt="" />
+          </div>
+          <div className="bold_text">Trouble Logging In?</div>
+          <div className="light_text">
+            Enter your email, phone, or username and we'll send you a link to
+            get back into your account.
           </div>
 
           <div className="inputs">
@@ -27,14 +33,7 @@ export default function Login() {
               size="small"
               className="text_field"
               id="filled-basic"
-              label="Username"
-              variant="filled"
-            />
-            <TextField
-              size="small"
-              className="text_field"
-              id="filled-basic"
-              label="Password"
+              label="Email, Phone, or Username"
               variant="filled"
             />
           </div>
@@ -42,28 +41,20 @@ export default function Login() {
 
           <Divider>OR</Divider>
 
-          <div className="login_with_fb">
-            <div>
-              <FacebookIcon />
-            </div>
-            <div>Log in with Facebook</div>
-          </div>
-
-          <h4
-            className="forgot_password"
-            onClick={() => history.push("./ResetPassword")}
+          <div
+            className="Create_new_account"
+            onClick={() => history.push("./Signup")}
           >
-            Forgot Password?
-          </h4>
+            Create New Account
+          </div>
         </Card>
 
         <Card className="card_body">
-          <div>
-            Don't have an account?
-            <span className="link" onClick={() => history.push("./Signup")}>
-              {" "}
-              Sign up{" "}
-            </span>
+          <div
+            className="back_to_login"
+            onClick={() => history.push("./Login")}
+          >
+            Back To Login
           </div>
         </Card>
       </div>

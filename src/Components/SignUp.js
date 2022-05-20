@@ -2,32 +2,16 @@ import Card from "@mui/material/Card";
 import { Button } from "@mui/material";
 import "./SignUp.scss";
 import insta from "./../../public/Assets/insta_name_logo.png";
-import google_play from "./../../public/Assets/google_play.png";
-import apple_app_store from "./../../public/Assets/apple_app_store.png";
-
-import Link from "@mui/material/Link";
 import Divider from "@mui/material/Divider";
 import TextField from "@mui/material/TextField";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import { useHistory } from "react-router-dom";
 
+import Footer from "./Footer.js";
+
 const SignUp = () => {
   let history = useHistory();
 
-  let link_arr = [
-    "Meta",
-    "About",
-    "Blog",
-    "Jobs",
-    "Help",
-    "API",
-    "Privacy",
-    "Terms",
-    "Top Accounts",
-    "Hashtags",
-    "Locations",
-    "Instagram Lite"
-  ];
   return (
     <div className="signup_wrapper">
       <div className="signup_card">
@@ -89,23 +73,9 @@ const SignUp = () => {
             </span>
           </div>
         </Card>
+      </div>
 
-        <div>Get the app.</div>
-        <div className="img_app_store">
-          <img src={google_play} alt="" />
-          <img src={apple_app_store} alt="" />
-        </div>
-      </div>
-      <div className="links_arr">
-        {link_arr.map((data) => {
-          return (
-            <Link className="link_arr_items" underline="none" href="#">
-              {data}
-            </Link>
-          );
-        })}
-      </div>
-      © 2022 Instagram from Meta
+      <Footer />
     </div>
   );
 };

@@ -1,0 +1,21 @@
+.Footer{
+  display:felx;
+  .img_app_store{
+    display:flex;
+    justify-content: center;
+    img{
+      width: 8rem;
+      margin: 1rem .2rem;
+      cursor: pointer;
+    }
+  }
+}
+.links_arr{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  .link_arr_items{
+    margin: .5rem;
+    color: grey;
+  }
+}

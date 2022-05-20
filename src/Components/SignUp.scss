@@ -21,12 +21,12 @@
         display:flex;
         justify-content: center;
         margin: .5rem;
-        color:blue;
+        color:rgb(10, 10, 245);
         cursor: pointer;
       }
 
       .link{
-        color: blue;
+        color: rgb(10, 10, 245);
         cursor:pointer;
       }
       .logo{
@@ -43,6 +43,9 @@
         font-weight: 500;
         color: rgb(170, 170, 170);
         margin: 1rem;
+      }
+      .forgot_password{
+        cursor: pointer;
       }
       button{
         margin: .3rem;
@@ -62,23 +65,24 @@
         }
       }
     }
-    .img_app_store{
-      display:flex;
-      justify-content: center;
-      img{
-        width: 8rem;
-        margin: 1rem .2rem;
-        cursor: pointer;
-      }
-    } 
   }
-  .links_arr{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    .link_arr_items{
-      margin: .5rem;
-      color: grey;
-    }
-  }
+
+}
+
+.back_to_login{
+  cursor: pointer;
+  font-weight: 500;
+}
+.Create_new_account{
+  margin: .5rem;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.bold_text{
+  font-weight: 500;
+}
+.light_text{
+  color:grey;
+  font-size: small;
 }
