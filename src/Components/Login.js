@@ -1,3 +1,4 @@
+import * as React from "react";
 import Card from "@mui/material/Card";
 import { Button } from "@mui/material";
 import "./SignUp.scss";
@@ -10,7 +11,7 @@ import Divider from "@mui/material/Divider";
 import TextField from "@mui/material/TextField";
 import FacebookIcon from "@mui/icons-material/Facebook";
 
-const SignUp = () => {
+export default function Login() {
   let link_arr = [
     "Meta",
     "About",
@@ -38,20 +39,6 @@ const SignUp = () => {
           </Button>
           <Divider>OR</Divider>
           <div className="inputs">
-            <TextField
-              size="small"
-              className="text_field"
-              id="filled-basic"
-              label="Mobile Number or Email"
-              variant="filled"
-            />
-            <TextField
-              size="small"
-              className="text_field"
-              id="filled-basic"
-              label="Full Name"
-              variant="filled"
-            />
             <TextField
               size="small"
               className="text_field"
@@ -105,6 +92,4 @@ const SignUp = () => {
       © 2022 Instagram from Meta
     </div>
   );
-};
-
-export default SignUp;
+}

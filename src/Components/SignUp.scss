@@ -1,5 +1,6 @@
 .signup_wrapper{
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   margin: 2rem;
@@ -8,8 +9,8 @@
 
   .signup_card{
     width: 22rem;
-    // height: 10rem;
     .card_body{
+      margin-bottom:1rem;
       padding: 1rem;
       border: 1px solid #DBDBDB;
       box-shadow: none;
@@ -24,20 +25,47 @@
         color: rgb(170, 170, 170);
         margin: 1rem;
       }
+      h4{
+        font-size: small;
+        font-weight: 500;
+        color: rgb(170, 170, 170);
+        margin: 1rem;
+      }
       button{
+        margin: .3rem;
         margin-bottom: 1rem;
         background-color: rgb(0,149,246);
+        text-transform: unset !important;
+        width:18rem;
+        box-shadow: none;
+      
       }
       .inputs{
         margin: 1rem;
         .text_field{
           margin: .3rem;
           width:18rem;
-          // height: 1rem;
+          
         }
       }
     }
-
-    
+    .img_app_store{
+      display:flex;
+      justify-content: center;
+      img{
+        width: 8rem;
+        margin: 1rem .2rem;
+        cursor: pointer;
+      }
+    } 
+  }
+  .links_arr{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    .link_arr_items{
+      margin: .5rem;
+      color: grey;
+    }
   }
 }
