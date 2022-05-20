@@ -37,7 +37,7 @@ export default function ResetPassword() {
               variant="filled"
             />
           </div>
-          <Button variant="contained">Log in</Button>
+          <Button variant="contained">Send Login Link</Button>
 
           <Divider>OR</Divider>
 

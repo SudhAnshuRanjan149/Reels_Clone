@@ -27,17 +27,17 @@ const Footer = () => {
           <img src={google_play} alt="" />
           <img src={apple_app_store} alt="" />
         </div>
+        <div className="links_arr">
+          {link_arr.map((data) => {
+            return (
+              <Link className="link_arr_items" underline="none" href="#">
+                {data}
+              </Link>
+            );
+          })}
+        </div>
+        © 2022 Instagram from Meta
       </div>
-      <div className="links_arr">
-        {link_arr.map((data) => {
-          return (
-            <Link className="link_arr_items" underline="none" href="#">
-              {data}
-            </Link>
-          );
-        })}
-      </div>
-      © 2022 Instagram from Meta
     </>
   );
 };
