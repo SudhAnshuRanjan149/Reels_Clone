@@ -16,6 +16,19 @@
       box-shadow: none;
       background-color: white;
       border-radius: none;
+
+      .login_with_fb{
+        display:flex;
+        justify-content: center;
+        margin: .5rem;
+        color:blue;
+        cursor: pointer;
+      }
+
+      .link{
+        color: blue;
+        cursor:pointer;
+      }
       .logo{
         margin: 1rem;
       }

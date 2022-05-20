@@ -9,8 +9,11 @@ import Link from "@mui/material/Link";
 import Divider from "@mui/material/Divider";
 import TextField from "@mui/material/TextField";
 import FacebookIcon from "@mui/icons-material/Facebook";
+import { useHistory } from "react-router-dom";
 
 const SignUp = () => {
+  let history = useHistory();
+
   let link_arr = [
     "Meta",
     "About",
@@ -80,10 +83,10 @@ const SignUp = () => {
         <Card className="card_body">
           <div>
             Have an account?
-            <Link underline="none" href="#">
+            <span className="link" onClick={() => history.push("./Login")}>
               {" "}
               Log in{" "}
-            </Link>
+            </span>
           </div>
         </Card>
 
