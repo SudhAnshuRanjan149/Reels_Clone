@@ -1,4 +1,4 @@
-import insta from "./../../public/Assets/insta_name_logo.png";
+import insta from "./../../../public/Assets/insta_name_logo.png";
 import "./Header.scss";
 
 const Header = () => {

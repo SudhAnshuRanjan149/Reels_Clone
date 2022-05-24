@@ -1,5 +1,5 @@
-import google_play from "./../../public/Assets/google_play.png";
-import apple_app_store from "./../../public/Assets/apple_app_store.png";
+import google_play from "./../../../public/Assets/google_play.png";
+import apple_app_store from "./../../../public/Assets/apple_app_store.png";
 import Link from "@mui/material/Link";
 import "./Footer.scss";
 

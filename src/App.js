@@ -1,8 +1,8 @@
 import React from "react";
 import "./styles.scss";
-import SignUp from "./Components/SignUp.js";
-import Login from "./Components/Login.js";
-import ResetPassword from "./Components/ResetPassword";
+import SignUp from "./Components/Login/SignUp.js";
+import Login from "./Components/Login/Login.js";
+import ResetPassword from "./Components/Login/ResetPassword";
 
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 const App = () => {

@@ -1,15 +1,17 @@
+import * as React from "react";
 import Card from "@mui/material/Card";
 import { Button } from "@mui/material";
 import "./SignUp.scss";
-import insta from "./../../public/Assets/insta_name_logo.png";
+import insta from "./../../../public/Assets/insta_name_logo.png";
+
 import Divider from "@mui/material/Divider";
 import TextField from "@mui/material/TextField";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import { useHistory } from "react-router-dom";
 
-import Footer from "./Footer.js";
+import Footer from "./../Common/Footer.js";
 
-const SignUp = () => {
+export default function Login() {
   let history = useHistory();
 
   return (
@@ -19,26 +21,8 @@ const SignUp = () => {
           <div className="logo">
             <img src={insta} alt="" />
           </div>
-          <h3>Sign up to see photos and videos from your friends.</h3>
-          <Button startIcon={<FacebookIcon />} variant="contained">
-            Log in with Facebook
-          </Button>
-          <Divider>OR</Divider>
+
           <div className="inputs">
-            <TextField
-              size="small"
-              className="text_field"
-              id="filled-basic"
-              label="Mobile Number or Email"
-              variant="filled"
-            />
-            <TextField
-              size="small"
-              className="text_field"
-              id="filled-basic"
-              label="Full Name"
-              variant="filled"
-            />
             <TextField
               size="small"
               className="text_field"
@@ -54,30 +38,36 @@ const SignUp = () => {
               variant="filled"
             />
           </div>
-          <Button variant="contained" autoCapitalize="off">
-            Sign up
-          </Button>
+          <Button variant="contained">Log in</Button>
 
-          <h4>
-            By signing up, you agree to our Terms , Data Policy and Cookies
-            Policy .
+          <Divider>OR</Divider>
+
+          <div className="login_with_fb">
+            <div>
+              <FacebookIcon />
+            </div>
+            <div>Log in with Facebook</div>
+          </div>
+
+          <h4
+            className="forgot_password"
+            onClick={() => history.push("./ResetPassword")}
+          >
+            Forgot Password?
           </h4>
         </Card>
 
         <Card className="card_body">
           <div>
-            Have an account?
-            <span className="link" onClick={() => history.push("./Login")}>
+            Don't have an account?
+            <span className="link" onClick={() => history.push("./Signup")}>
               {" "}
-              Log in{" "}
+              Sign up{" "}
             </span>
           </div>
         </Card>
       </div>
-
       <Footer />
     </div>
   );
-};
-
-export default SignUp;
+}
